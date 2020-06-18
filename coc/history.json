@@ -1,0 +1,75 @@
+{
+  "extensions": {
+    "%2Fhome%2Flei%2F": {
+      "config%2Fnvim": [
+        "q:q"
+      ]
+    },
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      "q"
+    ]
+  },
+  "folders": {
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      "i",
+      "q"
+    ]
+  },
+  "lists": {
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      "output"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fbt%2FGroot": [
+      "output"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fai-cv%2FMask_RCNN%2Fmrcnn": [
+      "out"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fintegration%2Froboeye-ros%2Fsrc": [
+      "outline"
+    ]
+  },
+  "commands": {
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      ":q"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fbt%2FGroot": [
+      "q a"
+    ]
+  },
+  "sources": {
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      ":Coc"
+    ]
+  },
+  "symbols": {
+    "%2Fhome%2Flei%2Fdev%2Fomplapp%2Fompl": [
+      "starStrategy",
+      "MAX_RANDOM_"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fai-cv%2Fefficientdet%2Fefficientdet": [
+      "d",
+      "cond",
+      "leinxx2012",
+      "IMAGES_PER_GPU",
+      "IMAGE"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fai-cv%2FPVN3D%2Fpvn3d": [
+      "m"
+    ]
+  },
+  "outline": {
+    "%2Fhome%2Flei%2Fdev%2Fbt%2FGroot": [
+      "   k"
+    ],
+    "%2Fhome%2Flei%2Fdev%2Fintegration%2Fgui": [
+      "?",
+      "q"
+    ]
+  },
+  "diagnostics": {
+    "%2Fhome%2Flei%2Fdev%2Fai-cv%2FPVN3D%2Fpvn3d": [
+      "q"
+    ]
+  }
+}

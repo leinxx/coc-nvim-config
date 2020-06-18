@@ -1,0 +1,5 @@
+python.setInterpreter
+workspace.renameCurrentFile
+clangd.update
+clangd.switchSourceHeader
+clangd.install
