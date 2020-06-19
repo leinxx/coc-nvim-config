@@ -64,12 +64,18 @@
     ],
     "%2Fhome%2Flei%2Fdev%2Fintegration%2Fgui": [
       "?",
-      "q"
+      "q",
+      ":"
     ]
   },
   "diagnostics": {
     "%2Fhome%2Flei%2Fdev%2Fai-cv%2FPVN3D%2Fpvn3d": [
       "q"
+    ]
+  },
+  "services": {
+    "%2Fhome%2Flei%2Fdev%2Fintegration%2Fgui": [
+      ":"
     ]
   }
 }

@@ -1,3 +1,4 @@
+workspace.showOutput
 python.setInterpreter
 workspace.renameCurrentFile
 clangd.update
