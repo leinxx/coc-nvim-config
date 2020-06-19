@@ -22,7 +22,9 @@ $ sudo dpkg -i ripgrep_11.0.2_amd64.deb
 
 Install nvim and plugins
 
-##Install nvim
+## Install nvim
+1. refer to nvim website
+2. Install all plugins:
 
 ```
 :PlugInstall
