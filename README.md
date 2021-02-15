@@ -33,6 +33,15 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 ```
 mkdir -p ~/.config
 cd ~/.config
+
+### Fix slow startup issue (optional)
+
+if nvim starts very slow, possibly because the nerdtree plugin is not working well. Remove all nerdtree related config in ~/config/nvim/init.vim and things should work
+
+### Check health (optional)
+
+open nvim, run `:checkhealth`, follow instructions to install additional dependencies if needed
+
 git init
 git remote add origin git@github.com:leinxx/coc-nvim-config.git
 git pull origin master
