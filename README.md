@@ -4,6 +4,7 @@
 ### Install nvim and plugins
 
 1. install nvim (refer to nvim website)
+
 `curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage`
@@ -11,6 +12,7 @@ chmod u+x nvim.appimage
 2. install coc
 
 follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
+
 `curl -sL install-node.now.sh/lts | bash`
 `sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
