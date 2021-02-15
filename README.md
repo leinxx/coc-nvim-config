@@ -1,13 +1,34 @@
 # coc-nvim-config
 ## setup my coc-nvim config
 
+### Install nvim and plugins
+
+1. install nvim (refer to nvim website)
+`curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage`
+
+2. install coc
+
+follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
+`curl -sL install-node.now.sh/lts | bash`
+`sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'`
+
+3. Install all nvim plugins:
+
+```
+:PlugInstall
+:PlugUpdate
+```
+
 ### Download conternt of this repo to .config
 
 ```
 mkdir -p ~/.config
 cd ~/.config
 git init
-git remote add origin git@github.com:leinxx/coc-nvim.git
+git remote add origin git@github.com:leinxx/coc-nvim-config.git
 git pull origin master
 ```
 
@@ -20,12 +41,3 @@ $ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgre
 $ sudo dpkg -i ripgrep_11.0.2_amd64.deb
 ```
 
-### Install nvim and plugins
-
-1. install nvim (refer to nvim website)
-2. Install all nvim plugins:
-
-```
-:PlugInstall
-:PlugUpdate
-```
