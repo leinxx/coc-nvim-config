@@ -1,7 +1,7 @@
 " Specify a directory for plugins
 call plug#begin('~/.vim/plugged')
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/nerdtree'
 "Plug 'tsony-tsonev/nerdtree-git-plugin'
 "Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
@@ -24,7 +24,8 @@ call plug#end()
 
 set encoding=UTF-8
 
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-g> :Files<Cr>
+nnoremap <C-p> :Rg<Cr>
 
 inoremap jk <ESC>
 nmap <C-n> :NERDTreeToggle<CR>
@@ -37,26 +38,6 @@ nmap ++ <plug>NERDCommenterToggle
 
 " for vim-devicons to work properly
 set guifont=DroidSansMono\ Nerd\ Font\ 11
-
-let g:NERDTreeGitStatusWithFlags = 1
-"let g:WebDevIconsUnicodeDecorateFolderNodes = 1
-"let g:NERDTreeGitStatusNodeColorization = 1
-"let g:NERDTreeColorMapCustom = {
-    "\ "Staged"    : "#0ee375",  
-    "\ "Modified"  : "#d9bf91",  
-    "\ "Renamed"   : "#51C9FC",  
-    "\ "Untracked" : "#FCE77C",  
-    "\ "Unmerged"  : "#FC51E6",  
-    "\ "Dirty"     : "#FFBD61",  
-    "\ "Clean"     : "#87939A",   
-    "\ "Ignored"   : "#808080"   
-    "\ }                         
-
-
-let g:NERDTreeIgnore = ['^node_modules$']
-
-" fix nerdtree bug of opening two trees
-
 
 " Open files in horizontal split
 nnoremap <silent> <Leader>s :call fzf#run({
@@ -97,24 +78,6 @@ set shiftwidth=2
 set expandtab
 
 "colorscheme gruvbox
-
-" sync open file with NERDTree
-" " Check if NERDTree is open or active
-function! IsNERDTreeOpen()        
-  return exists("t:NERDTreeBufName") && (bufwinnr(t:NERDTreeBufName) != -1)
-endfunction
-
-" Call NERDTreeFind iff NERDTree is active, current window contains a modifiable
-" file, and we're not in vimdiff
-function! SyncTree()
-  if &modifiable && IsNERDTreeOpen() && strlen(expand('%')) > 0 && !&diff
-    NERDTreeFind
-    wincmd p
-  endif
-endfunction
-
-" Highlight currently open buffer in NERDTree
-autocmd BufEnter * call SyncTree()
 
 " coc config
 let g:coc_global_extensions = [
