@@ -57,6 +57,7 @@ if nvim starts very slow, possibly because the nerdtree plugin is not working we
 follow: https://github.com/MaskRay/ccls/wiki/Build
 
 ```
+# this only works for ubuntu18.04
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
 cd ccls
 wget -c http://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
