@@ -10,25 +10,7 @@ curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
 ```
-
-2. install coc
-
-follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
-
-```
-curl -sL install-node.now.sh/lts | bash
-sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
- ```
-
-3. Install all nvim plugins:
-
-```
-:PlugInstall
-:PlugUpdate
-```
-
-### Download conternt of this repo to .config
+2. Download conternt of this repo to .config
 
 ```
 mkdir -p ~/.config
@@ -38,6 +20,31 @@ git init
 git remote add origin git@github.com:leinxx/coc-nvim-config.git
 git pull origin master
 ```
+
+3. install coc
+
+follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
+
+```
+curl -sL install-node.now.sh/lts | bash
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+ ```
+
+4. Install all nvim plugins:
+
+```
+neovim
+:PlugInstall
+:PlugUpdate
+```
+
+5. Install python3 support (optional)
+
+```
+python3 -m pip install --user --upgrade pynvim
+```
+
 
 ### set fzf for file and content search:
 
