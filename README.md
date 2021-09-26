@@ -90,6 +90,14 @@ cd Release
 sudo make install
 ```
 
+Replace coc-python with coc-pyright (coc-python is discontinued which causes error messages in nvim)
+
+```
+nvim
+:CocUninstall coc-python
+:CocInstall coc-pyright
+```
+
 ### Check health (optional)
 
 open nvim, run `:checkhealth`, follow instructions to install additional dependencies if needed
