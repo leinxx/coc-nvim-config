@@ -45,6 +45,13 @@ neovim
 python3 -m pip install --user --upgrade pynvim
 ```
 
+Replace coc-python with coc-pyright (coc-python is discontinued which causes error messages in nvim)
+
+```
+nvim
+:CocUninstall coc-python
+:CocInstall coc-pyright
+```
 
 ### set fzf for file and content search:
 
@@ -90,13 +97,6 @@ cd Release
 sudo make install
 ```
 
-Replace coc-python with coc-pyright (coc-python is discontinued which causes error messages in nvim)
-
-```
-nvim
-:CocUninstall coc-python
-:CocInstall coc-pyright
-```
 
 ### Check health (optional)
 
