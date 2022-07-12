@@ -26,7 +26,7 @@ git pull origin master
 follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
 
 ```
-curl -sL install-node.now.sh/lts | sudo bash
+curl -sL install-node.now.sh/lts | bash
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
  ```
