@@ -97,8 +97,11 @@ cd Release
 sudo make install
 ```
 
-Add "gv" command to jump to definition in vertical split:
-add the following commands to the end of file ```~/.vim/plugged/coc.nvim/plugin/coc.vim```:
+### Customize vim
+
+Jump to definition in vertical split by "gv":
+
+Add the following commands to the end of file ```~/.vim/plugged/coc.nvim/plugin/coc.vim```:
 ```
 nmap <silent> gd :call CocAction('jumpDefinition')<CR>
 nmap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
