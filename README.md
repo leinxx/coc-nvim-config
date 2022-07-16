@@ -108,6 +108,16 @@ nmap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 ```
 
+Add the following lines to the end of file `~/.config/nvim/init.vim`
+```
+" open list of opened files
+nnoremap <silent>gb :Buffers<CR>
+" search files in 'git list'
+nnoremap <silent>g[ :GFiles<CR>
+" search files in 'git status'
+nnoremap <silent>g] :GFiles?<CR>
+```
+
 
 ### Check health (optional)
 
