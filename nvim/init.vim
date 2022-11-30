@@ -243,3 +243,17 @@ let g:vista#renderer#icons = {
 \   "function": "\uf794",
 \   "variable": "\uf71b",
 \  }
+
+highlight CocHintFloat ctermfg=DarkBlue guifg=#ff0000
+highlight CocErrorFloat ctermfg=DarkBlue
+
+nnoremap <silent>gb :Buffers<CR>
+nnoremap <silent>g[ :GFiles<CR>
+nnoremap <silent>g] :GFiles?<CR>
+
+" lua require('vscode').change_style('dark')
+"
+" disable right click menu pop out
+set mouse=
+" change the coc float box text color
+highlight CocErrorFloat ctermfg=6
