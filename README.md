@@ -166,14 +166,15 @@ coc.nvim uses `~/.config/nvim/coc-settings.json` to set proxy. An example coc-se
     },
     "http.proxy": "http://username:password@proxy_url:port",
     "http.proxyStrictSSL": false,
-⚠   "https.rejectUnauthorized": false,
-⚠   "https.proxy": "http://username:password@proxy_url:port",
-⚠   "python.jediEnabled": false,
+     "https.rejectUnauthorized": false,
+     "https.proxy": "http://username:password@proxy_url:port",
+     "python.jediEnabled": false,
     "python.pythonPath": "~/.config/coc/extensions/node_modules/coc-pyright/python_path",
     "pyright.inlayHints.functionReturnTypes": true,
->>  "pyright.inlayHints.variableTypes": false
+    "pyright.inlayHints.variableTypes": false
+  }
 ```
 
-check coc-pyright's readme for the setup of "python.pythonPath", "pyright.inlayHints.functionReturnTypes" and "pyright.inlayHints.variableTypes".
+check coc-pyright's readme for the setup of `python.pythonPath`, `pyright.inlayHints.functionReturnTypes` and `pyright.inlayHints.variableTypes`.
 
 
