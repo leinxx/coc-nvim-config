@@ -122,3 +122,58 @@ nnoremap <silent>g] :GFiles?<CR>
 ### Check health (optional)
 
 open nvim, run `:checkhealth`, follow instructions to install additional dependencies if needed
+
+
+## use proxies
+
+nvim plugin uses github to install and update plugins. To use proxies, it can be set in ~/.gitconfig. for example:
+```
+[http]
+    sslverify = false
+    proxy = http://username:password@proxy_url:port
+  [user]
+    email = you email
+    name = your name
+  [https]
+    sslverify = false
+    proxy = http://username:password@proxy_url:port
+  [core]
+    editor = vi
+  [credential]
+    helper = store
+  [filter "lfs"]
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
+```
+
+coc.nvim uses `~/.config/nvim/coc-settings.json` to set proxy. An example coc-setting.json:
+```
+  {
+
+  "languageserver": {
+      "ccls": {
+        "command": "ccls",
+        "filetypes": ["c", "cpp", "objc", "objcpp"],
+        "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+        "initializationOptions": {
+           "cache": {
+             "directory": "/tmp/ccls"
+           }
+         }
+      }
+    },
+    "http.proxy": "http://username:password@proxy_url:port",
+    "http.proxyStrictSSL": false,
+⚠   "https.rejectUnauthorized": false,
+⚠   "https.proxy": "http://username:password@proxy_url:port",
+⚠   "python.jediEnabled": false,
+    "python.pythonPath": "~/.config/coc/extensions/node_modules/coc-pyright/python_path",
+    "pyright.inlayHints.functionReturnTypes": true,
+>>  "pyright.inlayHints.variableTypes": false
+```
+
+check coc-pyright's readme for the setup of "python.pythonPath", "pyright.inlayHints.functionReturnTypes" and "pyright.inlayHints.variableTypes".
+
+
