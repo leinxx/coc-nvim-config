@@ -62,6 +62,10 @@ curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
 ```
 
+### Setup pylance for coc:
+Default coc-pyright language server often give false alarm for names defined in libs. To get vscode-level languange server, use pylance, which uses pyright in the hood, but with extensite improvements. It is currently a vscode extension.
+Check gist [coc-pylance](https://gist.github.com/leinxx/c53eea5377d26b6d385133c58003ac1f) to setup pylance language server in nvim.
+
 ### Fix slow startup issue (optional)
 
 if nvim starts very slow, possibly because the nerdtree plugin is not working well. Remove all nerdtree related config in ~/config/nvim/init.vim and things should work
