@@ -66,6 +66,43 @@ sudo dpkg -i ripgrep_11.0.2_amd64.deb
 Default coc-pyright language server often give false alarm for names defined in libs. To get vscode-level languange server, use pylance, which uses pyright in the hood, but with extensite improvements. It is currently a vscode extension.
 Check gist [coc-pylance](https://gist.github.com/leinxx/c53eea5377d26b6d385133c58003ac1f) to setup pylance language server in nvim.
 
+### Setup markdown preview:
+Follow the instruction from [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) to install this plugin.
+
+After installation, modify its configuration file `~/.vim/plugged/markdown-preview.nvim/plugin/mkdp.vim` to allow remote preview:
+```
+  if !exists('g:mkdp_open_to_the_world')
+    let g:mkdp_open_to_the_world = 1
+  endif
+
+  " use custom ip to open preview page
+  " default empty
+  if !exists('g:mkdp_open_ip')
+    let g:mkdp_open_ip = '[your ip]'
+  endif
+  
+  if !exists('g:mkdp_port')
+    let g:mkdp_port = '8080'
+  endif
+
+  " set to 1, echo preview page url in command line when open preview page
+  " default is 0
+  if !exists('g:mkdp_echo_preview_url')
+    let g:mkdp_echo_preview_url = 1
+  endif
+
+  function! g:EchoUrl(url)
+      :echo a:url
+  endfunction
+  let g:mkdp_browserfunc = 'g:EchoUrl'
+```
+Add key mapping to toggle preview in `~/.config/nvim/init.vim`:
+```vim
+" I use gp or Alt-p to toggle preview. or follow [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) to setup keymapping
+map <silent>gp :MarkdownPreviewToggle<CR>
+nmap <A-p> <Plug>MarkdownPreviewToggle
+```
+
 ### Fix slow startup issue (optional)
 
 if nvim starts very slow, possibly because the nerdtree plugin is not working well. Remove all nerdtree related config in ~/config/nvim/init.vim and things should work
