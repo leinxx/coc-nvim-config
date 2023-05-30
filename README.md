@@ -5,14 +5,14 @@
 
 1. install nvim (refer to nvim website)
 
-```
+```bash
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
 chmod u+x nvim.appimage
 ./nvim.appimage
 ```
 2. Download conternt of this repo to .config
 
-```
+```bash
 mkdir -p ~/.config
 cd ~/.config
 
@@ -25,7 +25,7 @@ git pull origin master
 
 follow https://github.com/neoclide/coc.nvim, install js and vim-plug:
 
-```
+```bash
 curl -sL install-node.now.sh/lts | bash
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -33,7 +33,7 @@ sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.
 
 4. Install all nvim plugins:
 
-```
+```bash
 neovim
 :PlugInstall
 :PlugUpdate
@@ -41,7 +41,7 @@ neovim
 
 5. Install python3 support (optional)
 
-```
+```bash
 python3 -m pip install --user --upgrade pynvim
 ```
 
@@ -57,7 +57,7 @@ nvim
 
 1. install rpgrep for command `:Rg` to work:
 
-```
+```bash
 curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
 sudo dpkg -i ripgrep_11.0.2_amd64.deb
 ```
@@ -70,7 +70,7 @@ Check gist [coc-pylance](https://gist.github.com/leinxx/c53eea5377d26b6d385133c5
 Follow the instruction from [markdown-preview.nvim](https://github.com/iamcco/markdown-preview.nvim) to install this plugin.
 
 After installation, modify its configuration file `~/.vim/plugged/markdown-preview.nvim/plugin/mkdp.vim` to allow remote preview:
-```
+```vim
   if !exists('g:mkdp_open_to_the_world')
     let g:mkdp_open_to_the_world = 1
   endif
@@ -113,8 +113,7 @@ follow: https://github.com/MaskRay/ccls/wiki/Build.
 
 for ubuntu18.04:
 
-```
-
+```bash
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
 cd ccls
 wget -c http://releases.llvm.org/8.0.0/clang+llvm-8.0.0-x86_64-linux-gnu-ubuntu-18.04.tar.xz
@@ -127,7 +126,7 @@ sudo make install
 
 for Ubuntu 20.4:
 
-```
+```absh
 sudo apt-get install clang
 sudo apt-get install libclang-10-dev
 git clone --depth=1 --recursive https://github.com/MaskRay/ccls
@@ -143,14 +142,14 @@ sudo make install
 Jump to definition in vertical split by "gv":
 
 Add the following commands to the end of file ```~/.vim/plugged/coc.nvim/plugin/coc.vim```:
-```
+```vim
 nmap <silent> gd :call CocAction('jumpDefinition')<CR>
 nmap <silent> gs :call CocAction('jumpDefinition', 'split')<CR>
 nmap <silent> gv :call CocAction('jumpDefinition', 'vsplit')<CR>
 ```
 
 Add the following lines to the end of file `~/.config/nvim/init.vim`
-```
+```vim
 " open list of opened files
 nnoremap <silent>gb :Buffers<CR>
 " search files in 'git list'
@@ -190,7 +189,7 @@ nvim plugin uses github to install and update plugins. To use proxies, it can be
 ```
 
 coc.nvim uses `~/.config/nvim/coc-settings.json` to set proxy. An example coc-setting.json:
-```
+```json
   {
 
   "languageserver": {
